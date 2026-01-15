@@ -1,0 +1,315 @@
+.aboutContainer {
+    background: var(--bg);
+    color: var(--text);
+    max-width: 1200;
+    margin: 0 auto;
+}
+
+/* ---------------- PAGE HEADER ---------------- */
+.aboutHeader {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 70px 24px 40px;
+    background: var(--bg);
+}
+
+.aboutMainTitle {
+    font-size: 54px;
+    font-weight: 800;
+    columns: var(--text);
+
+}
+
+.spanMe {
+    background: linear-gradient(135deg, orange, rgb(234, 70, 11), #FE6A36);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aboutMainSubtitle {
+    margin-top: 12px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ---------------- WEB DEVELOPMENT ---------------- */
+.webSection {
+    position: sticky;
+    top: 120px;
+    /* header ke neeche */
+    z-index: 2;
+
+    padding: 100px 24px 150px;
+    background: var(--bg);
+
+}
+
+.sectionTitle {
+    font-size: 32px;
+
+}
+
+.sectionText {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 60px;
+}
+
+.webGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+}
+
+/* ---------- GLASS CARD ---------- */
+.glassCard {
+    position: relative;
+    padding: 32px 28px;
+    border-radius: 28px;
+
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0.04));
+
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.glassCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- CARD CONTENT ---------- */
+.cardTitle {
+    font-size: 22px;
+    font-weight: 700;
+    /* margin-bottom: 12px; */
+}
+
+.cardDesc {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+/* ---------- ACTIONS ---------- */
+.cardActions {
+    display: flex;
+    gap: 12px;
+}
+
+/* PRIMARY BUTTON */
+.cardBtnPrimary {
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    color: var(--bg);
+    background: linear-gradient(135deg, orange, rgb(234, 70, 11), #FE6A36);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.cardBtnPrimary:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+/* SECONDARY BUTTON */
+.cardBtnSecondary {
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    background: transparent;
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background 0.25s ease;
+}
+
+.cardBtnSecondary:hover {
+    background: var(--surface);
+}
+
+/* ---------- ICON WRAPPER ---------- */
+.iconWrapper {
+    position: absolute;
+    top: -18px;
+    left: 28px;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.15));
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid var(--border);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ICON */
+.cardIcon {
+    width: 22px;
+    height: 22px;
+    color: var(--text);
+}
+
+/* small spacing fix because of icon */
+.glassCard {
+    padding-top: 44px;
+}
+
+.glassCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    pointer-events: none;
+
+    background: radial-gradient(circle at top,
+            rgba(255, 255, 255, 0.25),
+            transparent 60%);
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.glassCard:hover::after {
+    opacity: 1;
+}
+
+
+
+/* ---------------- ETHICAL HACKING ---------------- */
+.ethicalSection {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -120px;
+    padding: 80px 24px;
+
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+.sectionTitle {
+    font-size: 32px;
+
+}
+
+.sectionText {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* GRID FOR LEARNING AREAS */
+.securityGrid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* SECURITY CARD */
+.securityCard {
+    padding: 28px;
+    border-radius: 20px;
+
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.04));
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+}
+
+.securityCard h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.securityCard p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* FINAL NOTE */
+.securityNote {
+    margin-top: 40px;
+    max-width: 700px;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .securityGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .webGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .webSection {
+        position: relative;
+        top: 0;
+    }
+
+    .aboutHeader {
+        position: relative;
+    }
+}
+
+.education {
+    margin-top: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    /* color: var(--muted); */
+}
+
+.educationChip {
+    border: 1px solid var(--border);
+    width: 100px;
+    border-radius: 30px;
+    padding: 0 12px;
+    color: var(--muted);
+    margin: 0 !important;
+}
